@@ -1,0 +1,72 @@
+package model;
+
+public class Secretaire {
+    private Integer id;
+    private String nom;
+    private String prenom;
+    private String nomUtilisateur;
+    private String motDePasse;
+    private final String role = "secretaire"; // Rôle par défaut défini comme constant
+
+    // Constructeur sans ID (utilisé pour créer un moniteur)
+    public Secretaire(String nom, String prenom, String nomUtilisateur, String motDePasse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.nomUtilisateur = nomUtilisateur;
+        this.motDePasse = motDePasse;
+    }
+
+    // Constructeur avec ID (utilisé lors du chargement depuis la base de données)
+    public Secretaire(Integer id, String nom, String prenom, String nomUtilisateur, String motDePasse) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.nomUtilisateur = nomUtilisateur;
+        this.motDePasse = motDePasse;
+    }
+
+    // Getters et setters
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNomUtilisateur() {
+        return nomUtilisateur;
+    }
+
+    public void setNomUtilisateur(String nomUtilisateur) {
+        this.nomUtilisateur = nomUtilisateur;
+    }
+
+    public String getMotDePasse() {
+        return motDePasse;
+    }
+
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
+    public String getRole() { // Getter pour le rôle
+        return role;
+    }
+}

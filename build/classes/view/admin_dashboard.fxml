@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main_form" prefHeight="580.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin_dashboardController">
+   <stylesheets>
+      <URL value="@styles/style.css" />
+      <URL value="@admin_dashboard.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane layoutX="-13.0" layoutY="129.0" prefHeight="494.0" prefWidth="274.0" styleClass="sidebar" stylesheets="@admin_dashboard.css">
+         <children>
+            <Button fx:id="vehicule_btn" layoutX="72.0" layoutY="279.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="162.0" styleClass="sidebar-button" stylesheets="@admin_dashboard.css" text="vehicule" />
+            <Button fx:id="logout" layoutX="100.0" layoutY="384.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="106.0" styleClass="sidebar-button" stylesheets="@admin_dashboard.css" text="quiter" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/8541772_car_transport_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="21.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/sign-out.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="moniteur_btn" layoutX="72.0" layoutY="71.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="39.0" prefWidth="162.0" styleClass="sidebar-button" stylesheets="@admin_dashboard.css" text="Moniteur" />
+            <Button fx:id="Secretaire_btn" layoutX="76.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="41.0" prefWidth="158.0" styleClass="sidebar-button" stylesheets="@admin_dashboard.css" text="Secrétaire" />
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="19.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/man.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="22.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/secretary.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="60.0" layoutY="43.0" prefHeight="66.0" prefWidth="731.0">
+         <children>
+            <Label layoutX="238.0" layoutY="27.0" prefHeight="50.0" prefWidth="500.0" styleClass="title" stylesheets="@admin_dashboard.css" text="Bienvenue a votre espace administrateur">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" layoutY="-7.0" prefHeight="58.0" prefWidth="840.0" styleClass="menu-bar" stylesheets="@admin_dashboard.css">
+         <children>
+            <Label layoutX="22.0" layoutY="10.0" prefHeight="27.0" prefWidth="133.0" styleClass="top" text="Mon Auto ecole ">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="close" layoutX="808.0" layoutY="8.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="40.0" styleClass="logout-button" stylesheets="@admin_dashboard.css" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="8.0" />
+            <ImageView fitHeight="22.0" fitWidth="36.0" layoutX="816.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@../image/x.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="minimize" layoutX="763.0" layoutY="8.0" mnemonicParsing="false" onAction="#minimize" opacity="0.99" prefHeight="38.0" prefWidth="40.0" styleClass="logout-button" stylesheets="@admin_dashboard.css" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="8.0">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="765.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/min.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="moniteur_form" layoutX="265.0" layoutY="132.0" prefHeight="480.0" prefWidth="565.0" stylesheets="@admin_dashboard.css">
+         <children>
+            <TableView fx:id="moniteur_tableview" layoutX="5.0" layoutY="6.0" prefHeight="241.0" prefWidth="557.0">
+              <columns>
+                <TableColumn fx:id="moniteur_col_id" prefWidth="96.6666259765625" text="id" />
+                <TableColumn fx:id="moniteur_col_nom" prefWidth="94.66668701171875" text="nom" />
+                  <TableColumn fx:id="moniteur_col_prenom" prefWidth="109.33334350585938" text="prenom" />
+                  <TableColumn fx:id="moniteur_col_nom_utilisateur" prefWidth="89.33331298828125" text="nom_utilisat" />
+                  <TableColumn fx:id="moniteur_col_mot_de_passe" prefWidth="89.33331298828125" text="mot de passe" />
+                  <TableColumn fx:id="moniteur_col_role" prefWidth="78.88885498046875" text="role" />
+              </columns>
+            </TableView>
+            <TextField fx:id="moniteur_nom" layoutX="118.0" layoutY="252.0" prefHeight="30.0" prefWidth="153.0" />
+            <Label layoutX="11.0" layoutY="255.0" prefHeight="29.0" prefWidth="100.0" text="Nom:">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="moniteur_prenom" layoutX="379.0" layoutY="252.0" />
+            <Label layoutX="312.0" layoutY="254.0" prefHeight="29.0" prefWidth="100.0" text="prenom:">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="moniteur_nom_utilisateur" layoutX="117.0" layoutY="302.0" prefHeight="30.0" prefWidth="158.0" />
+            <Label layoutX="10.0" layoutY="303.0" prefHeight="29.0" prefWidth="92.0" text="nom_utilisa:">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="moniteur_mot_De_passe" layoutX="388.0" layoutY="302.0" prefHeight="30.0" prefWidth="181.0" />
+            <Label layoutX="314.0" layoutY="303.0" prefHeight="29.0" prefWidth="66.0" text="mdpasse:">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="moniteur_ajouter" layoutX="55.0" layoutY="418.0" mnemonicParsing="false" onAction="#ajouterMoniteur" prefHeight="44.0" prefWidth="115.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="ajouter">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="moniteur_modifier" layoutX="234.0" layoutY="418.0" mnemonicParsing="false" onAction="#modifierMoniteur" prefHeight="44.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Modifier">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="moniteur_supprimer" layoutX="412.0" layoutY="418.0" mnemonicParsing="false" onAction="#supprimerMoniteur" prefHeight="44.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Supprimer">
+               <font>
+                  <Font name="Tahoma Bold" size="12.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-2.0" layoutY="1.0" prefHeight="483.0" prefWidth="566.0" styleClass="shadow" stylesheets="@admin_dashboard.css" visible="false" />
+         </children>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-bg" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane fx:id="Secretaire_form" layoutX="264.0" layoutY="138.0" prefHeight="482.0" prefWidth="572.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="5.0" prefHeight="241.0" prefWidth="564.0">
+               <children>
+                  <TableView fx:id="Secretaire_table_view" layoutX="2.0" layoutY="-1.0" prefHeight="257.0" prefWidth="564.0">
+                    <columns>
+                      <TableColumn fx:id="Secretaire_col_id" prefWidth="90.66665649414062" text="id" />
+                      <TableColumn fx:id="Secretaire_col_nom" prefWidth="109.33334350585938" text="nom" />
+                        <TableColumn fx:id="Secretaire_col_prenom" prefWidth="83.99996948242188" text="prenom" />
+                        <TableColumn fx:id="Secretaire_col_com_utilisateur" prefWidth="90.0" text="nom utilsateur" />
+                        <TableColumn fx:id="Secretaire_col_mot_de_passe" prefWidth="104.6666259765625" text="mot de passe" />
+                        <TableColumn fx:id="Secretaire_col_role" prefWidth="83.3333740234375" text="role" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="Secretaire_nom" layoutX="122.0" layoutY="279.0" prefHeight="30.0" prefWidth="146.0" />
+            <TextField fx:id="Secretaire_mot_de_passe" layoutX="122.0" layoutY="340.0" prefHeight="30.0" prefWidth="146.0" />
+            <TextField fx:id="Secretaire_prenom" layoutX="406.0" layoutY="279.0" prefHeight="30.0" prefWidth="153.0" />
+            <TextField fx:id="Secretaire_nom_utilisateur" layoutX="405.0" layoutY="341.0" prefHeight="30.0" prefWidth="153.0" />
+            <Label layoutX="23.0" layoutY="286.0" text="Nom:">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="343.0" layoutY="286.0" text="Prenom:">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="302.0" layoutY="346.0" text="nom utilisateur:">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="345.0" text="mot de passe:">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="Secretaire_ajouter" layoutX="33.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajouterSecretaire" prefHeight="40.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Ajouter">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Secretaire_modifier" layoutX="234.0" layoutY="420.0" mnemonicParsing="false" onAction="#modifierSecretaire" prefHeight="40.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Modifier">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Secretaire_supprimer" layoutX="422.0" layoutY="420.0" mnemonicParsing="false" onAction="#supprimerSecretaire" prefHeight="40.0" prefWidth="115.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Supprimer">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vehicule_form" layoutX="266.0" layoutY="138.0" prefHeight="479.0" prefWidth="566.0" stylesheets="@admin_dashboard.css" visible="false">
+         <children>
+            <AnchorPane layoutX="5.0" layoutY="4.0" prefHeight="268.0" prefWidth="554.0">
+               <children>
+                  <TableView fx:id="vehicule_table_view" layoutY="1.0" prefHeight="262.0" prefWidth="554.0">
+                    <columns>
+                      <TableColumn fx:id="vehicule_col_id" prefWidth="161.111083984375" text="id" />
+                      <TableColumn fx:id="vehicule_col_marque" prefWidth="210.22222900390625" text="marque" />
+                        <TableColumn fx:id="vehicule_col_type" prefWidth="182.66668701171875" text="type" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="vehicule_marque" layoutX="106.0" layoutY="282.0" prefHeight="30.0" prefWidth="190.0" />
+            <TextField fx:id="vehicule_type" layoutX="104.0" layoutY="330.0" prefHeight="30.0" prefWidth="189.0" />
+            <Label layoutX="26.0" layoutY="285.0" prefHeight="15.0" prefWidth="69.0" text="marque :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="336.0" prefHeight="15.0" prefWidth="69.0" text="type :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="vehicule_ajouter" layoutX="59.0" layoutY="405.0" mnemonicParsing="false" onAction="#ajouterVehicule" prefHeight="44.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Ajouter">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="vehicule_modifier" layoutX="241.0" layoutY="405.0" mnemonicParsing="false" onAction="#modifierVehicule" prefHeight="44.0" prefWidth="100.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Modifier">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="vehicule_supprimer" layoutX="414.0" layoutY="403.0" mnemonicParsing="false" onAction="#supprimerVehicule" prefHeight="44.0" prefWidth="110.0" styleClass="login-button" stylesheets="@admin_dashboard.css" text="Supprimer">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

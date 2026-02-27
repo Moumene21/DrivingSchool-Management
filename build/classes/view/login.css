@@ -1,0 +1,104 @@
+/* ---- Formulaire gauche (left-form) ---- */
+.left-form {
+    -fx-background-color: #FFA726; /* Couleur orange vif */
+    -fx-background-radius: 20px; /* Coins arrondis */
+    -fx-border-color: #FB8C00; /* Bordure orange foncé */
+    -fx-border-width: 2px; /* Bordure plus épaisse pour démarcation */
+    -fx-padding: 20px; /* Espacement interne */
+}
+
+/* ---- Formulaire droit (right-form) ---- */
+.right-form {
+    -fx-background-color: #FFFFFF; /* Couleur blanche */
+    -fx-background-radius: 20px; /* Coins arrondis */
+    -fx-border-color: #E0E0E0; /* Bordure gris clair */
+    -fx-border-width: 2px; /* Bordure fine */
+    -fx-padding: 20px; /* Espacement interne */
+}
+
+/* ---- Bouton de fermeture (close) ---- */
+.close {
+    -fx-background-color: #F5F5F5; /* Fond gris très clair */
+    -fx-text-fill: #000; /* Texte noir */
+    -fx-font-size: 12px; /* Taille réduite */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-cursor: hand; /* Curseur main */
+    -fx-padding: 5px; /* Espacement interne */
+    -fx-border-radius: 5px; /* Coins légèrement arrondis */
+    -fx-border-color: transparent; /* Pas de bordure visible */
+    -fx-min-width: 20px; /* Largeur minimale */
+    -fx-min-height: 20px; /* Hauteur minimale */
+}
+
+/* Bouton de fermeture (au survol) */
+.close:hover {
+    -fx-background-color: #E0E0E0; /* Gris clair */
+}
+
+/* ---- Champs de texte (TextField & PasswordField) ---- */
+/* ---- Champs de texte (TextField & PasswordField) ---- */
+.textfield,
+.passwordfield {
+    -fx-background-color: #FAFAFA; /* Fond gris clair */
+    -fx-background-radius: 15px; /* Coins arrondis */
+    -fx-border-color: #CCCCCC; /* Bordure gris moyen */
+    -fx-border-width: 1px; /* Bordure fine */
+    -fx-font-size: 14px; /* Taille de police standard */
+    -fx-font-family: "Arial"; /* Police simple et lisible */
+    -fx-padding: 12px 15px; /* Espacement interne */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1); /* Ombre subtile */
+    -fx-transition: all 0.2s ease-in-out; /* Transition fluide */
+}
+
+/* Champs de texte au focus */
+/* ---- Champs de texte (TextField & PasswordField) ---- */
+.textfield,
+.passwordfield {
+    -fx-background-color: #FAFAFA; /* Fond gris clair */
+    -fx-background-radius: 20px; /* Coins bien arrondis */
+    -fx-border-color: #E0E0E0; /* Bordure gris clair */
+    -fx-border-radius: 20px; /* Bordure arrondie */
+    -fx-border-width: 1px; /* Bordure fine */
+    -fx-font-size: 14px; /* Taille de police */
+    -fx-font-family: "Arial"; /* Police simple et lisible */
+    -fx-padding: 12px 15px; /* Espacement interne */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1); /* Ombre subtile */
+    -fx-transition: all 0.2s ease-in-out; /* Transition fluide */
+}
+
+/* Champs de texte au focus */
+.textfield:focused,
+.passwordfield:focused {
+    -fx-background-color: #FFFFFF; /* Fond blanc */
+    -fx-border-color: #FF9800; /* Bordure orange vif */
+    -fx-border-radius: 20px; /* Bordure arrondie */
+    -fx-border-width: 1.5px; /* Bordure plus épaisse */
+    -fx-effect: dropshadow(gaussian, rgba(255, 152, 0, 0.5), 10, 0, 0, 3); /* Ombre accentuée */
+}
+
+/* Champs de texte au survol */
+.textfield:hover,
+.passwordfield:hover {
+    -fx-background-color: #F7F7F7; /* Fond légèrement plus clair */
+    -fx-border-color: #FFA726; /* Bordure orange clair */
+    -fx-border-radius: 20px; /* Bordure arrondie */
+    -fx-transition: all 0.2s ease-in-out; /* Transition fluide */
+}
+
+/* ---- Bouton de connexion (login-btn) ---- */
+.login-btn {
+    -fx-background-color: linear-gradient(to bottom, #FF9800, #F57C00); /* Dégradé orange */
+    -fx-background-radius: 20px; /* Coins arrondis */
+    -fx-text-fill: white; /* Texte blanc */
+    -fx-font-size: 14px; /* Taille de police */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-font-family: "Arial"; /* Police simple */
+    -fx-padding: 10px 20px; /* Espacement interne */
+    -fx-cursor: hand; /* Curseur main */
+    -fx-border-color: transparent; /* Pas de bordure */
+}
+
+/* Bouton de connexion (au survol) */
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #F57C00, #E65100); /* Dégradé orange plus foncé */
+} 

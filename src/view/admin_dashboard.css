@@ -1,0 +1,115 @@
+/* Styles globaux */
+/* Style de la barre supérieure */
+
+
+.menu-bar {
+    -fx-background-color: #f0f0f0; /* Gris clair */
+    -fx-border-color: #cccccc; /* Bordure grise */
+    -fx-border-width: 0 0 1 0; /* Bordure en bas */
+}
+
+
+
+
+
+
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f7f9fc; /* Fond de l'application */
+}
+
+/* Barre latérale (sidebar) */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #ffa726, #fb8c00);
+    -fx-padding: 20;
+    -fx-background-radius: 15; /* Bordures arrondies */
+}
+
+/* Boutons dans la barre latérale */
+.sidebar-button {
+    -fx-background-color: white;
+    -fx-text-fill: #fb8c00;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #fb8c00;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+/* Bouton de déconnexion (quitter) */
+.logout-button {
+    -fx-background-color: #ef5350;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+}
+
+.logout-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+/* Contenu principal */
+.main-content {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+}
+
+/* Titre principal */
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #fb8c00; /* Fond orange */
+    -fx-padding: 10 20; /* Espacement autour du texte */
+    -fx-background-radius: 30; /* Bordures arrondies */
+    -fx-alignment: center; /* Centrer le texte */
+}
+
+/* Champs de texte */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 15;
+    -fx-padding: 5 10;
+    -fx-border-color: #fb8c00;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #ffa726;
+}
+
+/* Bouton de connexion */
+.login-button {
+    -fx-background-color: #fb8c00;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.login-button:hover {
+    -fx-background-color: #ffa726;
+}
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-backfround-radius:10px;
+}
+.shadow{
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.5),6,0,0,0);
+}
